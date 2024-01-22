@@ -1,0 +1,925 @@
+INFO - 2024-01-20 00:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 00:06:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 00:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 00:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 00:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 00:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-20 00:34:31 --> unlink(C:\xampp\htdocs\bedell\writable\debugbar/debugbar_1705707592.312703.json): No such file or directory
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\bedell\\writable\\debugbar/debugbar_1705707592.312703.json): No such file or directory', 'C:\\xampp\\htdocs\\bedell\\system\\Debug\\Toolbar\\Collectors\\History.php', 76, [...])
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(76): unlink('C:\\xampp\\htdocs\\bedell\\writable\\debugbar/debugbar_1705707592.312703.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(497): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1705710867.871774', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(474): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-20 00:42:37 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+in APPPATH\Controllers\Publiccontroller.php on line 26.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\bedell\\app\\Controllers\\Publiccontroller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Publiccontroller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Publiccontroller')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Publiccontroller')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Publiccontroller', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-20 00:43:02 --> mysqli_sql_exception: Unknown column 'id' in 'order clause' in C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\bedell\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bedell\system\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bedell\app\Controllers\Publiccontroller.php(26): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\bedell\system\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+#7 C:\xampp\htdocs\bedell\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+#8 C:\xampp\htdocs\bedell\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\bedell\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-01-20 00:43:02 --> Unknown column 'id' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `coursestable`
+ORDER BY `id` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `coursestable`
+ORDER BY `id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `coursestable`
+ORDER BY `id` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `coursestable`
+ORDER BY `id` DESC
+ LIMIT 3', [], false)
+ 5 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Publiccontroller.php(26): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-20 00:45:20 --> include(partials/home_vocational_courses_section.php): failed to open stream: No such file or directory
+in APPPATH\Views\public\index.php on line 128.
+ 1 APPPATH\Views\public\index.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(partials/home_vocational_courses_section.php): failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\index.php', 128, [...])
+ 2 APPPATH\Views\public\index.php(128): include()
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\index.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 6 APPPATH\Controllers\Publiccontroller.php(30): view('public/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-20 00:48:23 --> Cannot use object of type stdClass as array
+in APPPATH\Views\public\partials\home_page_sections\home_vocational_courses_section.php on line 23.
+ 1 APPPATH\Views\public\index.php(128): include()
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(30): view('public/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-20 01:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 01:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 01:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 01:10:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 01:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 01:14:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-20 01:24:54 --> Undefined property: stdClass::$profileImg
+in APPPATH\Views\public\partials\home_page_sections\home_vocational_courses_section.php on line 27.
+ 1 APPPATH\Views\public\partials\home_page_sections\home_vocational_courses_section.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$profileImg', 'C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\partials\\home_page_sections\\home_vocational_courses_section.php', 27, [...])
+ 2 APPPATH\Views\public\index.php(128): include('C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\partials\\home_page_sections\\home_vocational_courses_section.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\index.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/index', [], true)
+ 6 APPPATH\Controllers\Publiccontroller.php(30): view('public/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-20 02:07:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:11:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:11:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:14:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:14:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:15:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:16:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 02:36:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-20 02:58:29 --> syntax error, unexpected '" role="' (T_CONSTANT_ENCAPSED_STRING), expecting ';' or ','
+in APPPATH\Views\errors\404.php on line 25.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Controllers\Errors.php(9): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Errors->show404()
+ 5 SYSTEMPATH\CodeIgniter.php(963): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Errors))
+ 6 SYSTEMPATH\CodeIgniter.php(387): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-20 03:26:09 --> Trying to get property 'courseImage' of non-object
+in APPPATH\Views\public\courses.php on line 40.
+ 1 APPPATH\Views\public\courses.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'courseImage\' of non-object', 'C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\courses.php', 40, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\courses.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/courses', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(147): view('public/courses', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->courses()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-20 03:55:46 --> Undefined variable: isset
+in APPPATH\Views\public\news.php on line 28.
+ 1 APPPATH\Views\public\news.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: isset', 'C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php', 28, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/news', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(47): view('public/news', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-20 03:58:18 --> Array to string conversion
+in APPPATH\Views\public\news.php on line 41.
+ 1 APPPATH\Views\public\news.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/news', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(47): view('public/news', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-20 04:20:10 --> Undefined index: comment_count
+in APPPATH\Views\public\news.php on line 46.
+ 1 APPPATH\Views\public\news.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: comment_count', 'C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php', 46, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/news', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(47): view('public/news', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-20 04:26:25 --> mysqli_sql_exception: Duplicate column name 'id' in C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\bedell\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\bedell\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\bedell\system\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\bedell\app\Controllers\Publiccontroller.php(43): CodeIgniter\BaseModel->paginate(6)
+#7 C:\xampp\htdocs\bedell\system\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+#8 C:\xampp\htdocs\bedell\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+#9 C:\xampp\htdocs\bedell\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bedell\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-20 04:26:25 --> Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `team`.*, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `team`.*, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `team`.*, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `team`.*, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Publiccontroller.php(43): CodeIgniter\BaseModel->paginate(6)
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-20 04:26:59 --> mysqli_sql_exception: Duplicate column name 'id' in C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\bedell\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\bedell\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\bedell\system\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\bedell\app\Controllers\Publiccontroller.php(43): CodeIgniter\BaseModel->paginate(6)
+#7 C:\xampp\htdocs\bedell\system\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+#8 C:\xampp\htdocs\bedell\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+#9 C:\xampp\htdocs\bedell\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bedell\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-20 04:26:59 --> Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `team`.*, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `team`.*, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `team`.*, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `team`.*, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Publiccontroller.php(43): CodeIgniter\BaseModel->paginate(6)
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-20 04:29:50 --> mysqli_sql_exception: Duplicate column name 'id' in C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\bedell\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\bedell\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\bedell\system\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\bedell\app\Controllers\Publiccontroller.php(48): CodeIgniter\BaseModel->paginate(6)
+#7 C:\xampp\htdocs\bedell\system\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+#8 C:\xampp\htdocs\bedell\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+#9 C:\xampp\htdocs\bedell\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bedell\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-20 04:29:50 --> Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `team`.*, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `team`.*, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `team`.*, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `team`.*, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Publiccontroller.php(48): CodeIgniter\BaseModel->paginate(6)
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-20 04:30:26 --> mysqli_sql_exception: Duplicate column name 'id' in C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\bedell\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\bedell\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\bedell\system\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\bedell\app\Controllers\Publiccontroller.php(48): CodeIgniter\BaseModel->paginate(6)
+#7 C:\xampp\htdocs\bedell\system\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+#8 C:\xampp\htdocs\bedell\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+#9 C:\xampp\htdocs\bedell\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bedell\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-20 04:30:26 --> Duplicate column name 'id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `blog`.`id` as `bgId`, `team`.*, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `blog`.`id` as `bgId`, `team`.*, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `blog`.`id` as `bgId`, `team`.*, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `blog`.`id` as `bgId`, `team`.*, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Publiccontroller.php(48): CodeIgniter\BaseModel->paginate(6)
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-20 04:31:44 --> mysqli_sql_exception: Unknown column 'blog.content' in 'field list' in C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\bedell\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\bedell\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\bedell\system\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\bedell\app\Controllers\Publiccontroller.php(48): CodeIgniter\BaseModel->paginate(6)
+#7 C:\xampp\htdocs\bedell\system\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+#8 C:\xampp\htdocs\bedell\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+#9 C:\xampp\htdocs\bedell\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bedell\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-20 04:31:44 --> Unknown column 'blog.content' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.`id` as `blog_id`, `blog`.`title`, `blog`.`content`, `team`.`id` as `team_id`, `team`.`name` as `team_name`, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.`id` as `blog_id`, `blog`.`title`, `blog`.`content`, `team`.`id` as `team_id`, `team`.`name` as `team_name`, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.`id` as `blog_id`, `blog`.`title`, `blog`.`content`, `team`.`id` as `team_id`, `team`.`name` as `team_name`, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.`id` as `blog_id`, `blog`.`title`, `blog`.`content`, `team`.`id` as `team_id`, `team`.`name` as `team_name`, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Publiccontroller.php(48): CodeIgniter\BaseModel->paginate(6)
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-20 04:32:21 --> Undefined index: featureImg
+in APPPATH\Views\public\news.php on line 32.
+ 1 APPPATH\Views\public\news.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: featureImg', 'C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php', 32, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/news', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(54): view('public/news', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-20 04:33:49 --> mysqli_sql_exception: Duplicate column name 'title' in C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\bedell\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\bedell\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\bedell\system\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\bedell\app\Controllers\Publiccontroller.php(48): CodeIgniter\BaseModel->paginate(6)
+#7 C:\xampp\htdocs\bedell\system\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+#8 C:\xampp\htdocs\bedell\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+#9 C:\xampp\htdocs\bedell\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bedell\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-20 04:33:49 --> Duplicate column name 'title'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `blog`.`id` as `blog_id`, `blog`.`title`, `team`.`id` as `team_id`, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `blog`.`id` as `blog_id`, `blog`.`title`, `team`.`id` as `team_id`, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `blog`.`id` as `blog_id`, `blog`.`title`, `team`.`id` as `team_id`, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `blog`.`id` as `blog_id`, `blog`.`title`, `team`.`id` as `team_id`, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Publiccontroller.php(48): CodeIgniter\BaseModel->paginate(6)
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-20 04:34:21 --> mysqli_sql_exception: Duplicate column name 'title' in C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\bedell\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\bedell\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\bedell\system\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\bedell\app\Controllers\Publiccontroller.php(48): CodeIgniter\BaseModel->paginate(6)
+#7 C:\xampp\htdocs\bedell\system\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+#8 C:\xampp\htdocs\bedell\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+#9 C:\xampp\htdocs\bedell\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bedell\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-20 04:34:21 --> Duplicate column name 'title'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `blog`.`title` as `blog_title`, `blog`.`id` as `blog_id`, `blog`.`title`, `team`.`id` as `team_id`, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `blog`.`title` as `blog_title`, `blog`.`id` as `blog_id`, `blog`.`title`, `team`.`id` as `team_id`, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `blog`.`title` as `blog_title`, `blog`.`id` as `blog_id`, `blog`.`title`, `team`.`id` as `team_id`, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `blog`.`title` as `blog_title`, `blog`.`id` as `blog_id`, `blog`.`title`, `team`.`id` as `team_id`, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Publiccontroller.php(48): CodeIgniter\BaseModel->paginate(6)
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-20 04:34:48 --> mysqli_sql_exception: Unknown column 'team.title as teamTitle blog.id' in 'field list' in C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\bedell\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\bedell\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\bedell\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\bedell\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\bedell\system\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\bedell\app\Controllers\Publiccontroller.php(48): CodeIgniter\BaseModel->paginate(6)
+#7 C:\xampp\htdocs\bedell\system\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+#8 C:\xampp\htdocs\bedell\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+#9 C:\xampp\htdocs\bedell\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bedell\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-01-20 04:34:48 --> Unknown column 'team.title as teamTitle blog.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `blog`.`title` as `blog_title`, `team`.`title as teamTitle blog`.`id` as `blog_id`, `blog`.`title`, `team`.`id` as `team_id`, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `blog`.`title` as `blog_title`, `team`.`title as teamTitle blog`.`id` as `blog_id`, `blog`.`title`, `team`.`id` as `team_id`, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `blog`.`title` as `blog_title`, `team`.`title as teamTitle blog`.`id` as `blog_id`, `blog`.`title`, `team`.`id` as `team_id`, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (
+SELECT `blog`.*, `blog`.`title` as `blog_title`, `team`.`title as teamTitle blog`.`id` as `blog_id`, `blog`.`title`, `team`.`id` as `team_id`, COUNT(blog_comments.postId) as comment_count
+FROM `blog`
+LEFT JOIN `blog_comments` ON `blog_comments`.`postId` = `blog`.`id`
+JOIN `team` ON `team`.`id` = `blog`.`createdBy`
+GROUP BY `blog`.`id`, `team`.`id`
+) CI_count_all_results', [], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1188): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Publiccontroller.php(48): CodeIgniter\BaseModel->paginate(6)
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-20 04:36:32 --> Undefined index: postbody
+in APPPATH\Views\public\news.php on line 43.
+ 1 APPPATH\Views\public\news.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: postbody', 'C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php', 43, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/news', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(54): view('public/news', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-20 04:37:01 --> Undefined index: postbody
+in APPPATH\Views\public\news.php on line 43.
+ 1 APPPATH\Views\public\news.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: postbody', 'C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php', 43, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/news', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(54): view('public/news', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-20 04:55:56 --> Undefined index: createdAt
+in APPPATH\Views\public\news.php on line 47.
+ 1 APPPATH\Views\public\news.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: createdAt', 'C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php', 47, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/news', [], true)
+ 5 APPPATH\Controllers\Publiccontroller.php(55): view('public/news', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-20 04:56:28 --> A non well formed numeric value encountered
+in APPPATH\Views\public\news.php on line 14.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'A non well formed numeric value encountered', 'C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php', 14, [...])
+ 2 APPPATH\Views\public\news.php(14): date('d', '2024-01-19')
+ 3 APPPATH\Views\public\news.php(47): getDay('2024-01-19')
+ 4 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/news', [], true)
+ 7 APPPATH\Controllers\Publiccontroller.php(55): view('public/news', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-20 04:59:42 --> Undefined variable: date
+in APPPATH\Views\public\news.php on line 17.
+ 1 APPPATH\Views\public\news.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: date', 'C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php', 17, [...])
+ 2 APPPATH\Views\public\news.php(53): getDay('2024-01-19')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\bedell\\app\\Views\\public\\news.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('public/news', [], true)
+ 6 APPPATH\Controllers\Publiccontroller.php(55): view('public/news', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->news()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-20 05:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 05:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 05:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 05:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 05:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 18:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 18:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 18:51:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 18:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 18:52:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 18:52:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 18:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 18:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 19:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 19:09:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 19:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 19:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 19:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-20 19:20:28 --> Invalid file: "dashboard/Staff.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/Staff.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/Staff', [], true)
+ 3 APPPATH\Controllers\StaffController.php(120): view('dashboard/Staff', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\StaffController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-20 19:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 19:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 19:26:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 19:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 19:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 19:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 19:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 19:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-20 19:43:45 --> include(partials/tables/categories_table.php): failed to open stream: No such file or directory
+in APPPATH\Views\dashboard\categories.php on line 10.
+ 1 APPPATH\Views\dashboard\categories.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(partials/tables/categories_table.php): failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\bedell\\app\\Views\\dashboard\\categories.php', 10, [...])
+ 2 APPPATH\Views\dashboard\categories.php(10): include()
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\bedell\\app\\Views\\dashboard\\categories.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/categories', [], true)
+ 6 APPPATH\Controllers\CategoryController.php(65): view('dashboard/categories', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-20 19:43:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 19:45:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:15:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:27:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:27:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:31:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:31:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:33:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:33:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:34:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:34:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:40:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:41:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:41:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:43:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-20 20:43:54 --> Undefined index: featureImg
+in APPPATH\Views\dashboard\partials\tables\staff_table.php on line 29.
+ 1 APPPATH\Views\dashboard\partials\tables\staff_table.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: featureImg', 'C:\\xampp\\htdocs\\bedell\\app\\Views\\dashboard\\partials\\tables\\staff_table.php', 29, [...])
+ 2 APPPATH\Views\dashboard\staff.php(10): include('C:\\xampp\\htdocs\\bedell\\app\\Views\\dashboard\\partials\\tables\\staff_table.php')
+ 3 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\bedell\\app\\Views\\dashboard\\staff.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/staff', [], true)
+ 6 APPPATH\Controllers\StaffController.php(138): view('dashboard/staff', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\StaffController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-20 20:44:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:44:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:45:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:45:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:45:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:51:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:51:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:52:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:52:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:52:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:52:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:52:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:54:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-20 20:55:55 --> Undefined index: passwd
+in APPPATH\Controllers\StaffController.php on line 163.
+ 1 APPPATH\Controllers\StaffController.php(163): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: passwd', 'C:\\xampp\\htdocs\\bedell\\app\\Controllers\\StaffController.php', 163, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\StaffController->edit('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-20 20:56:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:56:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:56:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:56:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:56:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:57:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:58:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 20:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:01:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:04:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:05:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:07:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:08:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:09:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:10:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:10:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:14:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:14:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:21:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:21:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:21:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 21:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-20 21:31:45 --> Class 'App\Controllers\StaffModel' not found
+in APPPATH\Controllers\Publiccontroller.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Publiccontroller->staff()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publiccontroller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-20 22:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 22:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-20 22:32:22 --> Undefined index: passwd
+in APPPATH\Controllers\StaffController.php on line 163.
+ 1 APPPATH\Controllers\StaffController.php(163): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: passwd', 'C:\\xampp\\htdocs\\bedell\\app\\Controllers\\StaffController.php', 163, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\StaffController->edit('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-20 22:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 22:42:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-20 22:42:47 --> Undefined index: passwd
+in APPPATH\Controllers\StaffController.php on line 163.
+ 1 APPPATH\Controllers\StaffController.php(163): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: passwd', 'C:\\xampp\\htdocs\\bedell\\app\\Controllers\\StaffController.php', 163, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\StaffController->edit('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-20 22:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-20 22:43:36 --> Invalid file: "dashboard/edit_staff_profile.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/edit_staff_profile.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/edit_staff_profile', [], true)
+ 3 APPPATH\Controllers\StaffController.php(300): view('dashboard/edit_staff_profile', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\StaffController->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-20 22:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 22:46:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 22:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 22:46:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 22:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:28:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:30:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:30:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:34:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:39:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-20 23:46:07 --> Undefined variable: hasspasswd
+in APPPATH\Controllers\StaffController.php on line 257.
+ 1 APPPATH\Controllers\StaffController.php(257): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: hasspasswd', 'C:\\xampp\\htdocs\\bedell\\app\\Controllers\\StaffController.php', 257, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\StaffController->edit('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2024-01-20 23:47:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-20 23:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
